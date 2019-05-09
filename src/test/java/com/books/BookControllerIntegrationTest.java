@@ -36,7 +36,7 @@ public class BookControllerIntegrationTest
     @Test
     public void createPersons_And_GetPersonsTest() throws Exception
     {
-        Book book=createBook("Spring Boot Essentials",200,12.23,"Craig");
+        Book book=createBook("Java12 Essentials",200,12.23,"Craig");
         mockMvc.perform(get("/api/book/list").contentType(MediaType.APPLICATION_JSON))
                                     .andExpect(status().isOk())
                                     .andExpect(jsonPath("$[0].title", is(book.getTitle())));

@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.*;
 
 @Entity
 @Table(name = "book")
@@ -38,5 +38,8 @@ public class Book
 
     public Book(String title, Integer numberOfPages, Double cost, String author)
     {
+        this.title = title;
+        this.numberOfPages = numberOfPages;
+        this.cost = cost;
     }
 }
